@@ -1,0 +1,19 @@
+## Create a resource Group in Azure
+## Create VM as ansible-master then create another VM as ansible-client with network as (ansible-vnet) bcs we are creating it on ansible resource
+
+###master node configuration
+sudo -i  ## Become root user
+ 1  apt-get update
+    2  apt install ansible
+    3  ssh-keygen -t rsa ## generate ssh key
+    4  cat /root/.ssh/id_rsa.pub ## open ssh key
+    ###now check the ping to the client machine you can replace the client machine name with your name configure
+    5  ping client
+    
+###add the ssh key in the client vm
+sudo -i
+ vi /root/.ssh/authorized_keys  ## past ssh key from master(ssh....to....root@ansible-master)
+ 
+ ###then go back to master machine
+ ssh root@client
+ exit
