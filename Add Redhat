@@ -1,0 +1,10 @@
+## create VM instance with ansible as resource group and name as redhat, network as ansible-vnet
+## add redhat to dev.inv
+## push chages to github
+## ssh into redhat
+## sudo -i
+## vi /root/.ssh/authorized_keys  ## past ssh key from master(ssh....to....root@ansible-master)
+
+## then go back to master machine
+## cd to ansible-playbook and git pull origin dev
+## ansible all -m ping
