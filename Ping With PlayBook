@@ -1,5 +1,5 @@
-git clone https://github.com/gopal1409/ansible-playbook-sapient-dec.git
-cd ansible-playbook-sapient-dec/
+ git clone https://github.com/Naveen-100/Ansible-playbook.git
+cd Ansible-playbook/
 ls
-nano dev.inv
+nano dev.inv  ## remove and add ansible-client
 ansible all -m ping
