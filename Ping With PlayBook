@@ -1,0 +1,5 @@
+git clone https://github.com/gopal1409/ansible-playbook-sapient-dec.git
+cd ansible-playbook-sapient-dec/
+ls
+nano dev.inv
+ansible all -m ping
