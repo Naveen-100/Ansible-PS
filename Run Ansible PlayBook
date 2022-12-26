@@ -1,0 +1,37 @@
+Ansible.cfg
+------------------
+[defaults]
+inventory = dev.inv
+forks = 5
+
+dev.inv
+--------
+ansible-client
+
+nginx.yml
+-----------
+---
+##3any playbook start with three dash
+- 
+##the minues sign indicate a list of items
+  hosts: all
+  #3it is the target where my playbook will run
+  #varaibles
+  #in json the indentation happen with curl braces where as in ansible the indentation happen with two spaces
+  vars:
+    #variable need to define in key value format
+    motd_ubuntu: "Welcome to Ubuntu Linux \n"
+  ##we need to define tasks
+  #to define task it start with task block and below the name of the task
+  tasks:
+    - name: configure message of the day for ubuntu system 
+      copy:
+        content: "{{motd_ubuntu}}"
+        dest: /etc/motd
+
+        ###to call a varaible in python Jinja2
+
+
+-----------------------------------
+git pull
+ansible-playbook nginx.yml
